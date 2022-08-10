@@ -1,5 +1,6 @@
 import "./App.css";
 import ExpenseList from "./components/Expenses/ExpenseList";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 const App = () => {
   const expenses = [
@@ -9,7 +10,10 @@ const App = () => {
     { title: "RTX 3060ti", date: new Date(2022, 1, 10), amount: "23423" },
   ];
   return (
+    <div>
+      <NewExpense/>
       <ExpenseList expenses={expenses} />
+    </div>
   );
 }
 
