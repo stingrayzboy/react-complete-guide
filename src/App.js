@@ -9,9 +9,14 @@ const App = () => {
     { title: "Bhosadpappu", date: new Date(2012, 2, 23), amount: "34" },
     { title: "RTX 3060ti", date: new Date(2022, 1, 10), amount: "23423" },
   ];
+
+  const onAddExpense = (data) =>{
+    console.log("From App.js")
+    console.table(data)
+  }
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onSavedExpense={onAddExpense}/>
       <ExpenseList expenses={expenses} />
     </div>
   );
