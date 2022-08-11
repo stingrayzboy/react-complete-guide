@@ -27,6 +27,7 @@ const ExpenseForm = (props) => {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+    props.toggleForm();
   };
   return (
     <form onSubmit={formSubmitHandler}>
@@ -62,6 +63,7 @@ const ExpenseForm = (props) => {
       </div>
       <div className="new-expense__actions">
         <button type="submit">Add Expense</button>
+        <button onClick={props.toggleForm}>Cancel</button>
       </div>
     </form>
   );
